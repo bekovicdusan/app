@@ -48,7 +48,6 @@ export default defineComponent({
   },
   setup(props) {
     const showModal = ref(false)
-    const draggingOptions = ref({ options: { animation: 200 } })
     
     const deleteContact = ():void => {
       db.collection('contacts').doc({ id: +props.contact.id }).delete()
@@ -58,7 +57,6 @@ export default defineComponent({
 
     return {
       showModal,
-      draggingOptions,
 
       deleteContact
     }
