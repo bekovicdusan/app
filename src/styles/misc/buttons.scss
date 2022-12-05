@@ -30,6 +30,7 @@
 .tertiary-button {
   background-color: $tertiary;
   color: $primary-text;
+  box-shadow: 0 0 2px $primary;
   &:active {
     box-shadow: inset 0 0 8px $primary;
   } 
