@@ -18,6 +18,7 @@ import store from '@/store'
 export default defineComponent({
   name: 'NavBar',
   setup () {
+    // used for dynamically displaying the `add contact` button
     const isContactDetails = computed(() => store.state.isContactDetails)
 
     const handleClick = ():void => {

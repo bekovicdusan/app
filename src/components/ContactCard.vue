@@ -49,6 +49,7 @@ export default defineComponent({
   setup(props) {
     const showModal = ref(false)
     
+    // contact deletion logic
     const deleteContact = ():void => {
       db.collection('contacts').doc({ id: +props.contact.id }).delete()
       showModal.value = false

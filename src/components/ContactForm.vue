@@ -123,7 +123,7 @@ export default defineComponent({
       validity: props.contact ? 'valid' : 'pending'
     })
 
-    //validation variables
+    //validation variable
     const formValidity = ref(false)
     
     //other variables
@@ -132,6 +132,7 @@ export default defineComponent({
     const firstNameRef = ref<HTMLInputElement>()
     const showModal = ref(false)
 
+    //adding new contact logic
     const addContact = ():void => {
       const entry: IContactEntry = {
         id: Date.now(),
@@ -146,7 +147,9 @@ export default defineComponent({
       store.commit('addNewEntry', entry)
     }
 
+    //updating existing contact logic
     const updateContact = ():void => {
+
       // check to prevent unnecessary calls to db
       if (firstName.val !== props.contact?.firstName ||
           lastName.val !== props.contact?.lastName ||
@@ -206,6 +209,8 @@ export default defineComponent({
 
     onMounted(() => {
       validateForm()
+
+      //set focus to first form field
       if (firstNameRef.value !== undefined && !props.contact) {
         firstNameRef.value.focus()
       }

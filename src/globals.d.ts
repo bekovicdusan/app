@@ -1,3 +1,4 @@
+//custom type for the contact object
 export interface IContactEntry {
   id: number;
   firstName: string;
@@ -6,6 +7,7 @@ export interface IContactEntry {
   country: string;
 }
 
+//custom type for form input fields
 export interface IInputFields {
   val: string;
   validity: string;

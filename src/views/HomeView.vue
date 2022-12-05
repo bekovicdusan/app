@@ -12,7 +12,7 @@
       </div>
       <loading-spinner v-if="!dataFetched" />
       <div class="data-wrapper" :class="{list: showList}" v-else>
-        <div v-if="(contacts.length < 1)">
+        <div v-if="(contacts.length < 1)" class="no-contacts">
           No contacts found. Press the "Add Contact" button to save a new contact.
         </div>
         <contact-card v-else v-for="contact in contacts" :key="contact.id" :contact="contact" />
@@ -42,15 +42,19 @@ export default defineComponent({
     LoadingSpinner
   },
   setup () {
+    // state values
     const showForm = computed(() => store.state.showForm)
     const contacts = computed(() => store.state.contacts)
     const showList = computed(() => store.state.showList)
+
+    // other variables
     const checkboxRef = ref<HTMLInputElement>()
     const dataFetched = ref(false)
 
     const showListHandler = ():void => {
       store.commit('toggleShowList')
     }
+    
     const getContacts = ():Promise<IContactEntry[]> => (db.collection('contacts').get())
 
     onMounted(() => {
