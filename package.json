@@ -16,9 +16,7 @@
     "country-list": "^2.2.0",
     "localbase": "^0.7.5",
     "vue": "^3.2.13",
-    "vue-final-modal": "^3.4.11",
     "vue-router": "^4.0.3",
-    "vuedraggable": "^2.24.3",
     "vuex": "^4.0.0"
   },
   "devDependencies": {
