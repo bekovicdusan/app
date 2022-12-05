@@ -4,8 +4,8 @@ import router from './router'
 import store from './store'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faAddressBook, faPenToSquare, faTrash, faBars, faAddressCard } from '@fortawesome/free-solid-svg-icons'
+import { faAddressBook, faPenToSquare, faTrash, faBars, faAddressCard, faUser } from '@fortawesome/free-solid-svg-icons'
 
-library.add(faAddressBook, faPenToSquare, faTrash, faBars, faAddressCard)
+library.add(faAddressBook, faPenToSquare, faTrash, faBars, faAddressCard, faUser)
 
 createApp(App).use(store).use(router).component('font-awesome-icon', FontAwesomeIcon).mount('#app')

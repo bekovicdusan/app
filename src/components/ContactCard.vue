@@ -13,6 +13,7 @@
       <font-awesome-icon class="icon edit" icon="fa-pen-to-square"/>
       <font-awesome-icon @click.prevent="(showModal = true)" class="icon delete" icon="fa-trash"/>
     </div>
+    <font-awesome-icon class="bg-user" icon="fa-user"/>
     <Teleport to="#app">
       <div class="modal-overlay" v-if="showModal" @click="showModal = false"></div>
     </Teleport>
