@@ -1,0 +1,117 @@
+.home-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .contacts {
+    margin: $spacing-l;
+    .headline-wrapper {
+      display: flex;
+      .headline {
+        color: $primary-text;
+        font-weight: 700;
+        margin: 0;
+      }
+    }
+    .data-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: flex-start;
+      max-width: 1000px;
+      margin-top: $spacing-l;
+      transition: all .3s;
+      width: 927px;
+    }
+    .data-wrapper.list {
+      flex-direction: column;
+    }
+    .switch {
+      text-align: left;
+      display: flex;
+      align-items: center;
+      margin-top: $spacing-l;
+      .toggle {
+        font-size: 20px;
+        margin-right: $spacing-xs;
+      }
+      .input {
+        height: 0;
+        width: 0;
+        visibility: hidden;
+        &:checked {
+          +.label {
+            background: $primary;
+            &::after {
+              left: calc(100% - 2px);
+              transform: translateX(-100%);
+            }
+          }
+        }
+      }
+      .label {
+        cursor: pointer;
+        text-indent: -9999px;
+        width: 42px;
+        height: 22px;
+        background: $secondary;
+        display: block;
+        border-radius: 100px;
+        position: relative;
+        margin-right: $spacing-l;
+        &::after {
+          content: '';
+          position: absolute;
+          top: 2px;
+          left: 2px;
+          width: 18px;
+          height: 18px;
+          background: #fff;
+          border-radius: 50%;
+          transition: 0.3s;
+        }
+        &:active {
+          &::after {
+            width: 25px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1030px) {
+  .home-view {
+    .contacts {
+      .data-wrapper {
+        width: 750px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 810px) {
+  .home-view {
+    .contacts {
+      .data-wrapper {
+        width: 500px;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .home-view {
+    .contacts {
+      .data-wrapper {
+        width: 350px;
+        .contact-card-container {
+          .contact-info {
+            flex-direction: column;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.nav-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $accent;
+  padding: 0;
+  box-shadow: 0 0 10px $primary;
+  .navbar {
+    width: 75vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .nav-item {
+      text-decoration: none;
+      cursor: pointer;
+      padding: $spacing-l;
+      &:visited, &:active, &:focus {
+        color: $text;
+      }
+    }
+    .nav-item.home {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &:visited, &:active, &:focus {
+        color: $text;
+      }
+      span {
+        font-size: 18px;
+        font-weight: 700;
+      }
+      .vue-logo {
+        width: 30px;
+        height: 30px;
+        padding: 0;
+        margin: 0;
+        margin-right: $spacing-s;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .navbar {
+    .logo-text {
+      display: none;
+    }
+  }
+}
