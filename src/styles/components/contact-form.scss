@@ -12,6 +12,7 @@
     margin: 0 0 $spacing-l 0;
   }
   .actions {
+    margin-top: $spacing-standard;
     .update {
       margin-right: $spacing-s;
     }
@@ -53,6 +54,9 @@
           box-shadow: 0 0 3px $warning;
         }
       }
+    }
+    .submit {
+      margin-top: $spacing-s;
     }
   }
   .form.invalid {
